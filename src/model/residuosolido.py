@@ -1,5 +1,7 @@
 class Residuo_Solido:
-    def __init__(self, descricao = None, quant = None, organico = None, reciclavel = None, limpo_e_livre = None, inflamavel = None, radioativo = None, origem = None):
+    def __init__(self, descricao = None, quant = None, organico = None, 
+                 reciclavel = None, limpo_e_livre = None, inflamavel = None, 
+                 radioativo = None, origem = None):
         self.error = ''
         self.material = descricao
         self.quantidade = quant

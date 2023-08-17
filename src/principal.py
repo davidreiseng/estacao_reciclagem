@@ -18,17 +18,17 @@ class Principal(Ui_MainWindow, QMainWindow):
         super().setupUi(self)
 
         self.lista_residuos = [] # banco falso
-       # self.frame.hide()
+        self.frame.hide()#frame na tela da tabela
 
         self.frame_erro_login.hide()
        
-        self.frame_msg_erro.hide()
+        self.frame_msg_erro.hide()#frame na tela de cadastro
 
         self.line_edit_login.setFocus()#coloca o foco no line edit de login
 
         self.push_button_entrar.clicked.connect(self.realizar_login)
 
-        self.push_button_salvar.clicked.connect(self.salvar_residuos)
+        # self.push_button_salvar.clicked.connect(self.salvar_residuos)
 
         self.pushButton_sair.clicked.connect(self.apresentacao)
 
@@ -90,12 +90,12 @@ class Principal(Ui_MainWindow, QMainWindow):
 
         self.stacked_widget.setCurrentWidget(self.page_login)
 
-    def salvar_residuos(self):
-        if self.line_edit_material.text() == '':
-            self.frame_msg_erro.show()
-        else:
-            #deve salvar os dados do registro sólido
-            self.stacked_widget.setCurrentWidget(self.page_apresentacao)
+    # def salvar_residuos(self):
+    #     if self.line_edit_material.text() == '':
+    #         self.frame_msg_erro.show()
+    #     else:
+    #         #deve salvar os dados do registro sólido
+    #         self.stacked_widget.setCurrentWidget(self.page_apresentacao)
 
     
     def recalcular_tam_imagem_2(self, end_imagem: str, w: int = 16, h: int = 16):
@@ -121,34 +121,33 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.label_erro.setText(residuo.error)
             self.frame_msg_erro.show()
         else:
-            self.lista_residuos.append(residuo)
-            
-            self.label_erro.setText('Erro de cadrasto')
-            self.frame_msg_erro.show()
-
+            self.lista_residuos.append(residuo)           
+            # self.frame_msg_erro.show()
+            self.label_erro_2.setText('Cadastrado com sucesso!')
+            self.frame.show()
             self.line_edit_material.setFocus()
             self.enviar_dados_tabela()
+            self.stacked_widget.setCurrentWidget(self.page_apresentacao)
 
-       # if residuo.error != '':
+        # if residuo.error != '':
         #    self.label_erro_2.setText(residuo.error)
-         #   self.frame.show()
+        #   self.frame.show()
 
         #else:
-         #   self.label_erro_2.setText('Cadastrado com sucesso!')
-          #  self.frame.show()
+        #  self.frame.show()
 
             
 
-        print(
-            f'Material: {material}\n'
-            f'Quantidade(Kg): {quantidade}\n'
-            f'Orgânico?: {organico}\n'
-            f'Reciclável?: {reciclavel}\n'
-            f'Está limpo e livre de contaminação?: {limpo_e_livre}\n'
-            f'É inflamável?: {inflamavel}\n'
-            f'É radioativo?: {radioativo}\n'
-            f'Qual a origem do material?: {origem}'
-        )
+        # print(
+        #     f'Material: {material}\n'
+        #     f'Quantidade(Kg): {quantidade}\n'
+        #     f'Orgânico?: {organico}\n'
+        #     f'Reciclável?: {reciclavel}\n'
+        #     f'Está limpo e livre de contaminação?: {limpo_e_livre}\n'
+        #     f'É inflamável?: {inflamavel}\n'
+        #     f'É radioativo?: {radioativo}\n'
+        #     f'Qual a origem do material?: {origem}'
+        # )
 
     def enviar_dados_tabela(self):
         cont_linhas = 0
