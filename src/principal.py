@@ -36,6 +36,8 @@ class Principal(Ui_MainWindow, QMainWindow):
 
         self.push_button_salvar.clicked.connect(self.salvar_dados)
 
+        self.pushButton_limpar.clicked.connect(self.limpar_cadastro)
+
         #self.set_label_img(self.label_4, 'img/eco.png')
         self.set_label_img(self.label, 'img/eco.png')
         self.set_label_img(self.label_img_logo, 'img/eco2.png')
@@ -84,6 +86,12 @@ class Principal(Ui_MainWindow, QMainWindow):
         #quantidade = self.line_edit_quantidade.text()
 
         self.stacked_widget.setCurrentWidget(self.page_cadastro)
+
+
+    def limpar_cadastro(self):
+        self.line_edit_material.clear()
+        self.line_edit_quantidade.clear()
+        self.lineEdit_origem.clear()
 
 
     def apresentacao(self):
@@ -148,6 +156,7 @@ class Principal(Ui_MainWindow, QMainWindow):
         #     f'É radioativo?: {radioativo}\n'
         #     f'Qual a origem do material?: {origem}'
         # )
+
 
     def enviar_dados_tabela(self):
         cont_linhas = 0
