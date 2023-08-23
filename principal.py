@@ -28,16 +28,19 @@ class Principal(Ui_MainWindow, QMainWindow):
 
         self.push_button_entrar.clicked.connect(self.realizar_login)
 
-        #self.push_button_salvar.clicked.connect(self.salvar_residuos)
+        # self.push_button_salvar.clicked.connect(self.salvar_residuos)
 
         self.pushButton_sair.clicked.connect(self.apresentacao)
 
         self.pushButton_cadastrar.clicked.connect(self.cadastrar)
 
         self.push_button_salvar.clicked.connect(self.salvar_dados)
-        self.pushButton_limpar.clicked.connect(self.limpar_cadrasto)
-    
-       # self.pushButton_limpar2.clicked.connect(self.limpar_opcoes_radio)
+
+        self.pushButton_limpar.clicked.connect(self.limpar_cadastro)
+
+        # self.pushButton_limpar.clicked.connect(self.limpar_button)
+
+        self.pushButton_limpar.clicked.connect(self.clear_radio_buttons)
 
         #self.set_label_img(self.label_4, 'img/eco.png')
         self.set_label_img(self.label, 'img/eco.png')
@@ -76,38 +79,29 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.label_erro_login.setText('Seu login ou senha estão incorretos!')
 
             self.frame_erro_login.show()
-    
 
-   
-        
+
 
 
     def cadastrar(self):
-        
 
-       # material = self.line_edit_material.text()
+        #material = self.line_edit_material.text()
 
         #quantidade = self.line_edit_quantidade.text()
 
         self.stacked_widget.setCurrentWidget(self.page_cadastro)
 
-    def limpar_cadrasto(self):
-       self.line_edit_material.clear()
-       self.line_edit_quantidade.clear()
-       self.lineEdit_origem.clear()
 
-
-    def limpar_opcoes_radio (self): 
-          
-        self.radioButton_1sim.setChecked(False)
-        self.radioButton_1nao.setChecked(False)
-
-
-
-
-
-
-
+    def limpar_cadastro(self):
+        self.line_edit_material.clear()
+        self.line_edit_quantidade.clear()
+        self.lineEdit_origem.clear()
+    
+    def clear_radio_buttons (self):
+        self.widget_1.setExclusive(False)
+        for button in self.widget_1.buttons():
+            button.setChecked(False)
+        self.widget_1.setExclusive(True)
 
 
     def apresentacao(self):
@@ -140,11 +134,45 @@ class Principal(Ui_MainWindow, QMainWindow):
         else :
             organico = ""
 
-        #organico = True if self.radioButton_1sim.isChecked() else  False
-        reciclavel = True if self.radioButton_2nao.isChecked() else False
-        limpo_e_livre = True if self.radioButton_3sim.isChecked() else False
-        inflamavel = True if self.radioButton_4sim.isChecked() else False
-        radioativo = True if self.radioButton_5sim.isChecked() else False
+        if self.radioButton_2nao.isChecked():
+            reciclavel= True
+        elif self.radioButton_2sim.isChecked():
+            reciclavel= False
+        else :
+            reciclavel = ""
+       
+        if self.radioButton_3sim.isChecked():
+            limpo_e_livre = True
+        elif self.radioButton_3nao.isChecked():
+            limpo_e_livre = False
+        else :
+            limpo_e_livre  = ""    
+    
+        if self.radioButton_4sim.isChecked():
+            inflamavel = True
+        elif self.radioButton_4nao.isChecked():
+            inflamavel = False
+        else :
+            inflamavel  = ""
+
+        if self.radioButton_5sim.isChecked():
+            radioativo = True
+        elif self.radioButton_5nao.isChecked():
+            radioativo = False
+        else :
+            radioativo  = ""
+
+
+
+
+           
+
+
+        #organico = True if self.radioButton_1sim.isChecked() else False
+       # reciclavel = True if self.radioButton_2sim.isChecked() else False
+       # limpo_e_livre = True if self.radioButton_3sim.isChecked() else False
+       # inflamavel = True if self.radioButton_4sim.isChecked() else False
+        #radioativo = True if self.radioButton_5sim.isChecked() else False
         origem = self.lineEdit_origem.text()
         
         residuo = Residuo_Solido(material, int(quantidade), organico, reciclavel, limpo_e_livre, inflamavel, radioativo, origem)
@@ -159,10 +187,6 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.line_edit_material.setFocus()
             self.enviar_dados_tabela()
             self.stacked_widget.setCurrentWidget(self.page_apresentacao)
-
-
-    
-              
 
         # if residuo.error != '':
         #    self.label_erro_2.setText(residuo.error)
@@ -184,6 +208,7 @@ class Principal(Ui_MainWindow, QMainWindow):
         #     f'Qual a origem do material?: {origem}'
         # )
 
+
     def enviar_dados_tabela(self):
         cont_linhas = 0
         self.tableWidget.setRowCount(len(self.lista_residuos))
@@ -198,7 +223,6 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.tableWidget.setItem(cont_linhas, 7, QTableWidgetItem(ref_obj.origem))
 
             cont_linhas += 1
-    
 
 
 if __name__ == '__main__':
