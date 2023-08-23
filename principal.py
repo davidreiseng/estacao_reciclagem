@@ -2,7 +2,7 @@ import sys
 
 
 from gui import Ui_MainWindow
-from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QTableWidgetItem
+from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QTableWidgetItem, QButtonGroup
 from PyQt6 import QtWidgets
 from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtCore import Qt
@@ -45,6 +45,29 @@ class Principal(Ui_MainWindow, QMainWindow):
         #self.set_label_img(self.label_4, 'img/eco.png')
         self.set_label_img(self.label, 'img/eco.png')
         self.set_label_img(self.label_img_logo, 'img/eco2.png')
+
+        self.tratar_groups()
+
+    def tratar_groups(self):
+        self.button_group1 = QButtonGroup()
+        self.button_group1.addButton(self.radioButton_1sim)
+        self.button_group1.addButton(self.radioButton_1nao)
+
+        self.button_group2 = QButtonGroup()
+        self.button_group2.addButton(self.radioButton_2sim)
+        self.button_group2.addButton(self.radioButton_2nao)
+
+        self.button_group3 = QButtonGroup()
+        self.button_group3.addButton(self.radioButton_3sim)
+        self.button_group3.addButton(self.radioButton_3nao)
+
+        self.button_group4 = QButtonGroup()
+        self.button_group4.addButton(self.radioButton_4sim)
+        self.button_group4.addButton(self.radioButton_4nao)
+
+        self.button_group5 = QButtonGroup()
+        self.button_group5.addButton(self.radioButton_5sim)
+        self.button_group5.addButton(self.radioButton_5nao)
 
         
     def set_label_img(self, label: QLabel, end_img: str):
@@ -98,10 +121,20 @@ class Principal(Ui_MainWindow, QMainWindow):
         self.lineEdit_origem.clear()
     
     def clear_radio_buttons (self):
-        self.widget_1.setExclusive(False)
-        for button in self.widget_1.buttons():
+        self.button_group1.setExclusive(False)
+        for button in self.button_group1.buttons():
             button.setChecked(False)
-        self.widget_1.setExclusive(True)
+        self.button_group1.setExclusive(True)
+
+        self.button_group2.setExclusive(False)
+        for button in self.button_group2.buttons():
+            button.setChecked(False)
+        self.button_group2.setExclusive(True)
+
+        self.button_group3.setExclusive(False)
+        for button in self.button_group3.buttons():
+            button.setChecked(False)
+        self.button_group3.setExclusive(True)
 
 
     def apresentacao(self):
