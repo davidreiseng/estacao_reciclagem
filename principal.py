@@ -14,7 +14,7 @@ class Principal(Ui_MainWindow, QMainWindow):
 
         super().setupUi(self)
 
-        self.lista_residuos = [] # banco falso
+        self.lista_residuos = [] #banco falso
         self.frame.hide()#frame na tela da tabela
 
         self.frame_erro_login.hide()
@@ -91,7 +91,6 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.frame_erro_login.show()
 
     def cadastrar(self):
-
         self.stacked_widget.setCurrentWidget(self.page_cadastro)
 
     def limpar_cadastro(self):
@@ -176,7 +175,7 @@ class Principal(Ui_MainWindow, QMainWindow):
 
         origem = self.lineEdit_origem.text()
         
-        residuo = Residuo_Solido(material, int(quantidade), organico, reciclavel, limpo_e_livre, inflamavel, radioativo, origem)
+        residuo = Residuo_Solido(material, quantidade, organico, reciclavel, limpo_e_livre, inflamavel, radioativo, origem)
         if residuo.error != '':
             self.label_erro.setText(residuo.error)
             self.frame_msg_erro.show()
