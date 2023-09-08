@@ -6,6 +6,7 @@ from PyQt6 import QtWidgets
 from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtCore import Qt
 from model.residuosolido import Residuo_Solido
+from login.login import Login
 
 class Principal(Ui_MainWindow, QMainWindow):
 
@@ -35,10 +36,22 @@ class Principal(Ui_MainWindow, QMainWindow):
 
         self.pushButton_limpar.clicked.connect(self.clear_radio_buttons)
 
+        self.pushButton_home.clicked.connect(self.voltar_login)
+
+        self.pushButton_meus_res.clicked.connect(self.meus_residuos)
+
+        self.pushButton_cad_res.clicked.connect(self.cad_res)
+
+        self.pushButton_voltar.clicked.connect(self.voltar_inicio)
+
         self.set_label_img(self.label, 'img/eco.png')
         self.set_label_img(self.label_img_logo, 'img/eco2.png')
 
         self.tratar_groups()
+
+    def voltar_login(self):
+        self.stacked_widget.setCurrentWidget(self.page_login)
+        self.frame_erro_login.hide()
 
     def tratar_groups(self):
         self.button_group1 = QButtonGroup()
@@ -73,6 +86,7 @@ class Principal(Ui_MainWindow, QMainWindow):
         login = self.line_edit_login.text()#recupera o texto do line edit
 
         senha = self.line_edit_senha.text()
+        
 
         if login == 'admin' and senha == '12345':
 
@@ -82,7 +96,70 @@ class Principal(Ui_MainWindow, QMainWindow):
 
             self.frame_erro_login.hide()
 
-            self.stacked_widget.setCurrentWidget(self.page_apresentacao)
+            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+
+        else:
+
+            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+
+            self.frame_erro_login.show()
+        if login == 'david' and senha == '54321':
+
+            self.line_edit_login.setText('')
+
+            self.line_edit_senha.setText('')
+
+            self.frame_erro_login.hide()
+
+            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+
+        else:
+
+            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+
+            self.frame_erro_login.show()
+        if login == 'jhully' and senha == '56789':
+
+            self.line_edit_login.setText('')
+
+            self.line_edit_senha.setText('')
+
+            self.frame_erro_login.hide()
+
+            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+
+        else:
+
+            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+
+            self.frame_erro_login.show()
+
+        if login == 'naylana' and senha == '010203':
+
+            self.line_edit_login.setText('')
+
+            self.line_edit_senha.setText('')
+
+            self.frame_erro_login.hide()
+
+            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+
+        else:
+
+            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+
+            self.frame_erro_login.show()
+
+
+        if login == 'caioh235' and senha == 'ch1337':
+
+            self.line_edit_login.setText('')
+
+            self.line_edit_senha.setText('')
+
+            self.frame_erro_login.hide()
+
+            self.stacked_widget.setCurrentWidget(self.page_cad_res)
 
         else:
 
@@ -92,6 +169,16 @@ class Principal(Ui_MainWindow, QMainWindow):
 
     def cadastrar(self):
         self.stacked_widget.setCurrentWidget(self.page_cadastro)
+    
+    def cad_res(self):
+        self.stacked_widget.setCurrentWidget(self.page_cadastro)
+
+    def meus_residuos(self):
+        self.stacked_widget.setCurrentWidget(self.page_apresentacao)
+
+    def voltar_inicio(self):
+        self.stacked_widget.setCurrentWidget(self.page_login)
+        self.frame_erro_login.hide()
 
     def limpar_cadastro(self):
         self.line_edit_material.clear()
@@ -127,6 +214,7 @@ class Principal(Ui_MainWindow, QMainWindow):
     def apresentacao(self):
 
         self.stacked_widget.setCurrentWidget(self.page_login)
+        self.frame_erro_login.hide()
     
     def recalcular_tam_imagem_2(self, end_imagem: str, w: int = 16, h: int = 16):
             print(f'w:{w}, h:{h}')
@@ -187,6 +275,7 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.enviar_dados_tabela()
             self.stacked_widget.setCurrentWidget(self.page_apresentacao)
 
+
     def enviar_dados_tabela(self):
         cont_linhas = 0
         self.tableWidget.setRowCount(len(self.lista_residuos))
@@ -199,7 +288,8 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.tableWidget.setItem(cont_linhas, 5, QTableWidgetItem(str('Sim' if ref_obj.inflamavel else 'Não')))
             self.tableWidget.setItem(cont_linhas, 6, QTableWidgetItem(str('Sim' if ref_obj.radioativo else 'Não')))
             self.tableWidget.setItem(cont_linhas, 7, QTableWidgetItem(ref_obj.origem))
-
+            self.limpar_cadastro()
+            self.clear_radio_buttons()
             cont_linhas += 1
 
 
