@@ -34,7 +34,7 @@ background-color: rgb(255, 255, 255);</string>
      <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_login">
      <property name="enabled">
@@ -72,52 +72,14 @@ background-color: rgb(255, 255, 255);</string>
          </property>
         </spacer>
        </item>
-       <item row="4" column="1">
-        <widget class="QPushButton" name="push_button_entrar">
-         <property name="text">
-          <string>Entrar</string>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="line_edit_senha">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
          </property>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="3">
-        <widget class="QFrame" name="frame_erro_login">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+         <property name="placeholderText">
+          <string>Insira sua senha</string>
          </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QLabel" name="label_erro_login">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(240, 61, 1);</string>
-            </property>
-            <property name="text">
-             <string>Login ou senha incorretas...</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_2">
-            <property name="text">
-             <string>X</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
         </widget>
        </item>
        <item row="0" column="0">
@@ -132,16 +94,6 @@ background-color: rgb(255, 255, 255);</string>
           </size>
          </property>
         </spacer>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="line_edit_senha">
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-         <property name="placeholderText">
-          <string>Insira sua senha</string>
-         </property>
-        </widget>
        </item>
        <item row="1" column="1">
         <widget class="QLineEdit" name="line_edit_login">
@@ -175,30 +127,122 @@ background-color: rgb(255, 255, 255);</string>
          </property>
         </widget>
        </item>
+       <item row="4" column="0" colspan="3">
+        <widget class="QFrame" name="frame_erro_login">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_erro_login">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(240, 61, 1);</string>
+            </property>
+            <property name="text">
+             <string>Login ou senha incorretas...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="push_button_entrar">
+         <property name="text">
+          <string>Entrar</string>
+         </property>
+        </widget>
+       </item>
       </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_cad_res">
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>861</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>841</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_cad_res">
+          <property name="text">
+           <string>Cadastrar Resíduo</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_meus_res">
+          <property name="text">
+           <string>Meus resíduos salvos</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_voltar">
+          <property name="text">
+           <string>Voltar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="page_apresentacao">
      <widget class="QPushButton" name="pushButton_cadastrar">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>60</y>
-        <width>75</width>
-        <height>23</height>
+        <x>820</x>
+        <y>90</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>Cadastrar</string>
+       <string>Cadastrar novo</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_sair">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>90</y>
-        <width>75</width>
-        <height>23</height>
+        <x>844</x>
+        <y>560</y>
+        <width>81</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -212,86 +256,11 @@ background-color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>160</y>
+        <y>140</y>
         <width>841</width>
         <height>411</height>
        </rect>
       </property>
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>4</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>5</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>6</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>7</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>8</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>9</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>10</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>11</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>12</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>13</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>14</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>15</string>
-       </property>
-      </row>
       <column>
        <property name="text">
         <string>Material</string>
@@ -340,9 +309,9 @@ background-color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>60</y>
+        <y>80</y>
         <width>351</width>
-        <height>81</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -355,8 +324,8 @@ background-color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>40</y>
-         <width>401</width>
+         <y>10</y>
+         <width>351</width>
          <height>21</height>
         </rect>
        </property>
@@ -367,6 +336,32 @@ background-color: rgb(255, 255, 255);</string>
         <string>Erro de cadastro</string>
        </property>
       </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_alterar">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>50</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Alterar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_home">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>10</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="page_cadastro">
@@ -651,19 +646,6 @@ background-color: rgb(255, 255, 255);</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QPushButton" name="push_button_msg_fechar">
-        <property name="geometry">
-         <rect>
-          <x>470</x>
-          <y>20</y>
-          <width>31</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>X</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_erro">
         <property name="geometry">
          <rect>
@@ -733,14 +715,30 @@ background-color: rgb(255, 255, 255);</string>
   <tabstop>line_edit_login</tabstop>
   <tabstop>line_edit_senha</tabstop>
   <tabstop>push_button_entrar</tabstop>
-  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_cad_res</tabstop>
+  <tabstop>pushButton_meus_res</tabstop>
+  <tabstop>pushButton_voltar</tabstop>
+  <tabstop>pushButton_home</tabstop>
+  <tabstop>pushButton_alterar</tabstop>
   <tabstop>pushButton_cadastrar</tabstop>
-  <tabstop>pushButton_sair</tabstop>
   <tabstop>tableWidget</tabstop>
+  <tabstop>pushButton_sair</tabstop>
   <tabstop>line_edit_material</tabstop>
   <tabstop>line_edit_quantidade</tabstop>
+  <tabstop>radioButton_1sim</tabstop>
+  <tabstop>radioButton_1nao</tabstop>
+  <tabstop>radioButton_2nao</tabstop>
+  <tabstop>radioButton_2sim</tabstop>
+  <tabstop>radioButton_3sim</tabstop>
+  <tabstop>radioButton_3nao</tabstop>
+  <tabstop>radioButton_4sim</tabstop>
+  <tabstop>radioButton_4nao</tabstop>
+  <tabstop>radioButton_5sim</tabstop>
+  <tabstop>radioButton_5nao</tabstop>
   <tabstop>lineEdit_origem</tabstop>
-  <tabstop>push_button_msg_fechar</tabstop>
+  <tabstop>push_button_salvar</tabstop>
+  <tabstop>pushButton_limpar</tabstop>
+  <tabstop>push_button_msg_fechar_2</tabstop>
  </tabstops>
  <resources/>
  <connections/>
