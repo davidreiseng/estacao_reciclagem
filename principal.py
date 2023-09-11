@@ -6,7 +6,8 @@ from PyQt6 import QtWidgets
 from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtCore import Qt
 from model.residuosolido import Residuo_Solido
-from login.login import Login
+from cadastro.cadastro import Cadastro
+
 
 class Principal(Ui_MainWindow, QMainWindow):
 
@@ -16,6 +17,9 @@ class Principal(Ui_MainWindow, QMainWindow):
         super().setupUi(self)
 
         self.lista_residuos = [] #banco falso
+
+        self.lista_cadastro = []
+
         self.frame.hide()#frame na tela da tabela
 
         self.frame_erro_login.hide()
@@ -44,10 +48,35 @@ class Principal(Ui_MainWindow, QMainWindow):
 
         self.pushButton_voltar.clicked.connect(self.voltar_inicio)
 
+        self.pushButton_login_us.clicked.connect(self.login_us)
+
+        self.pushButton_cadastrar_us.clicked.connect(self.cadastro_us)
+
+        self.pushButton_salvarT3.clicked.connect(self.salvar_cadastro)
+
+        # self.pushButton_alterar.clicked.connect(self.alterar_residuo)
+
         self.set_label_img(self.label, 'img/eco.png')
         self.set_label_img(self.label_img_logo, 'img/eco2.png')
 
         self.tratar_groups()
+
+    def salvar_cadastro(self):
+        usuario = self.lineEdit_nome_us.text()
+        senha = self.lineEdit_senha_us.text()
+
+        cadastro = Cadastro(usuario, senha)
+
+        if cadastro.error != '':
+            self.label_erro_cadastro.setText(usuario.error)
+            self.frame_4.show()
+        else:
+            self.lista_cadastro.append(usuario)
+            self.label_erro_cadastro.setText('Dados cadastrados com sucesso!')
+            self.frame_4.show()
+            # self.list
+            self.lineEdit_nome_us.setFocus()
+
 
     def voltar_login(self):
         self.stacked_widget.setCurrentWidget(self.page_login)
@@ -167,6 +196,13 @@ class Principal(Ui_MainWindow, QMainWindow):
 
             self.frame_erro_login.show()
 
+    def login_us(self):
+        self.stacked_widget.setCurrentWidget(self.page_login)
+
+    def cadastro_us(self):
+        self.stacked_widget.setCurrentWidget(self.page_3)
+
+       
     def cadastrar(self):
         self.stacked_widget.setCurrentWidget(self.page_cadastro)
     
@@ -214,7 +250,6 @@ class Principal(Ui_MainWindow, QMainWindow):
     def apresentacao(self):
 
         self.stacked_widget.setCurrentWidget(self.page_login)
-        self.frame_erro_login.hide()
     
     def recalcular_tam_imagem_2(self, end_imagem: str, w: int = 16, h: int = 16):
             print(f'w:{w}, h:{h}')
@@ -291,7 +326,6 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.limpar_cadastro()
             self.clear_radio_buttons()
             cont_linhas += 1
-
 
 if __name__ == '__main__':
 
