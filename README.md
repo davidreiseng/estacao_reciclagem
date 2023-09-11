@@ -15,19 +15,30 @@
 * [Licença](#licença)
 * [Conclusão](#conclusão)
   
-## Descrição do projeto 
+## 📝 Descrição do projeto 
 
 <p align="justify"> 
-Desenvolvimento do registro de materiais de uma estação de reciclagem de resíduos sólidos. O sistema realiza o cadastro de usuários para que tenham acesso ao sistema e permita-o submeter informações e características dos resíduos sólidos que chegam na empresa, de forma simples e objetiva.
+Desenvolvimento do registro de materiais de uma estação de reciclagem de resíduos sólidos. O sistema realiza o cadastro de usuários para que eles tenham acesso ao sistema e possam submeter informações e características dos resíduos sólidos que chegam à empresa Ecociclo.
 
  ## :gear: Funcionalidades do projeto
 
-✔️`1° Utilidade`: Cadastro do usuário e login : 
+✔️`1° Utilidade`: Cadastro do usuário e login :
 
-* :heavy_check_mark: `1° Utilidade` : 
+* :heavy_check_mark: `1° Utilidade` : Realiza o cadastro do usuário, e assim que isso é feito, direciona para a efetuação do login.
 
 ✔️`2° Utilidade`: Cadrasto dos materiais e registro dos dados: 
 
-* :heavy_check_mark: `2° Utilidade`: O método inicia coletando informações inseridas pelo usuário, que são necessárias  um objeto de resíduo. 
+* :heavy_check_mark: `2° Utilidade`: O método inicia coletando informações inseridas pelo usuário, as quais são necessárias para especificar as características do resíduo, e armazena os dados fornecidos para o controle dos materiais destinados à triagem.
 
 ✔️`3° Utilidade`: 
+
+## ✅ Aplicação
+
+<div align="center">
+</div>
+
+## 🛠️ Ferramentas utilizadas
+<a href="https://www.python.org/" target="_blank">
+  <img src="C:\Users\CASASBAHIA2322\Downloads\OIP.jpg" alt="python" width="40" height="40"/>
+</a>
+
