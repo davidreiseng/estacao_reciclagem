@@ -23,6 +23,8 @@ class Principal(Ui_MainWindow, QMainWindow):
         self.frame.hide()#frame na tela da tabela
 
         self.frame_erro_login.hide()
+
+        self.frame_erro_cad.hide()
        
         self.frame_msg_erro.hide()#frame na tela de cadastro
 
@@ -52,7 +54,8 @@ class Principal(Ui_MainWindow, QMainWindow):
 
         self.pushButton_cadastrar_us.clicked.connect(self.cadastro_us)
 
-        self.pushButton_salvarT3.clicked.connect(self.salvar_cadastro)
+        self.pushButton_salvarT3.clicked.connect(self.tela_login)
+
 
         # self.pushButton_alterar.clicked.connect(self.alterar_residuo)
 
@@ -68,14 +71,14 @@ class Principal(Ui_MainWindow, QMainWindow):
         cadastro = Cadastro(usuario, senha)
 
         if cadastro.error != '':
-            self.label_erro_cadastro.setText(usuario.error)
-            self.frame_4.show()
+            self.label_erro_cadastro.setText(cadastro.error)
+            self.frame_erro_cad.show()
         else:
-            self.lista_cadastro.append(usuario)
-            self.label_erro_cadastro.setText('Dados cadastrados com sucesso!')
-            self.frame_4.show()
-            # self.list
+            self.lista_cadastro.append(cadastro)
+            # self.label_erro_cadastro.setText('Dados cadastrados com sucesso!')
+            self.frame_erro_cad.show()
             self.lineEdit_nome_us.setFocus()
+            
 
 
     def voltar_login(self):
@@ -117,84 +120,85 @@ class Principal(Ui_MainWindow, QMainWindow):
         senha = self.line_edit_senha.text()
         
 
-        if login == 'admin' and senha == '12345':
+        # if login == 'admin' and senha == '12345':
 
-            self.line_edit_login.setText('')
+        #     self.line_edit_login.setText('')
 
-            self.line_edit_senha.setText('')
+        #     self.line_edit_senha.setText('')
 
-            self.frame_erro_login.hide()
+        #     self.frame_erro_login.hide()
 
-            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+        #     self.stacked_widget.setCurrentWidget(self.page_cad_res)
 
-        else:
+        # else:
 
-            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+        #     self.label_erro_login.setText('Seu login ou senha estão incorretos!')
 
-            self.frame_erro_login.show()
-        if login == 'david' and senha == '54321':
+        #     self.frame_erro_login.show()
 
-            self.line_edit_login.setText('')
+        # if login == 'david' and senha == '54321':
 
-            self.line_edit_senha.setText('')
+        #     self.line_edit_login.setText('')
 
-            self.frame_erro_login.hide()
+        #     self.line_edit_senha.setText('')
 
-            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+        #     self.frame_erro_login.hide()
 
-        else:
+        #     self.stacked_widget.setCurrentWidget(self.page_cad_res)
 
-            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+        # else:
 
-            self.frame_erro_login.show()
-        if login == 'jhully' and senha == '56789':
+        #     self.label_erro_login.setText('Seu login ou senha estão incorretos!')
 
-            self.line_edit_login.setText('')
+        #     self.frame_erro_login.show()
+        # if login == 'jhully' and senha == '56789':
 
-            self.line_edit_senha.setText('')
+        #     self.line_edit_login.setText('')
 
-            self.frame_erro_login.hide()
+        #     self.line_edit_senha.setText('')
 
-            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+        #     self.frame_erro_login.hide()
 
-        else:
+        #     self.stacked_widget.setCurrentWidget(self.page_cad_res)
 
-            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+        # else:
 
-            self.frame_erro_login.show()
+        #     self.label_erro_login.setText('Seu login ou senha estão incorretos!')
 
-        if login == 'naylana' and senha == '010203':
+        #     self.frame_erro_login.show()
 
-            self.line_edit_login.setText('')
+        # if login == 'naylana' and senha == '010203':
 
-            self.line_edit_senha.setText('')
+        #     self.line_edit_login.setText('')
 
-            self.frame_erro_login.hide()
+        #     self.line_edit_senha.setText('')
 
-            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+        #     self.frame_erro_login.hide()
 
-        else:
+        #     self.stacked_widget.setCurrentWidget(self.page_cad_res)
 
-            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+        # else:
 
-            self.frame_erro_login.show()
+        #     self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+
+        #     self.frame_erro_login.show()
 
 
-        if login == 'caioh235' and senha == 'ch1337':
+        # if login == 'caioh235' and senha == 'ch1337':
 
-            self.line_edit_login.setText('')
+        #     self.line_edit_login.setText('')
 
-            self.line_edit_senha.setText('')
+        #     self.line_edit_senha.setText('')
 
-            self.frame_erro_login.hide()
+        #     self.frame_erro_login.hide()
 
-            self.stacked_widget.setCurrentWidget(self.page_cad_res)
+        #     self.stacked_widget.setCurrentWidget(self.page_cad_res)
 
-        else:
+        # else:
 
-            self.label_erro_login.setText('Seu login ou senha estão incorretos!')
+        #     self.label_erro_login.setText('Seu login ou senha estão incorretos!')
 
-            self.frame_erro_login.show()
+        #     self.frame_erro_login.show()
 
     def login_us(self):
         self.stacked_widget.setCurrentWidget(self.page_login)
@@ -202,6 +206,8 @@ class Principal(Ui_MainWindow, QMainWindow):
     def cadastro_us(self):
         self.stacked_widget.setCurrentWidget(self.page_3)
 
+    def tela_login(self):
+        self.stacked_widget.setCurrentWidget(self.page_login)
        
     def cadastrar(self):
         self.stacked_widget.setCurrentWidget(self.page_cadastro)
