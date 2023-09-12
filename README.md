@@ -70,7 +70,6 @@ Desenvolvimento do registro de materiais de uma estação de reciclagem de resí
 
 ## 👩‍💻Acesso
 
-
 Você pode [acessar o código fonte do projeto](https://github.com/davidreiseng/estacao_reciclagem) ou [baixá-lo](https://github.com/davidreiseng/estacao_reciclagem.zip).
 
 <hr>
