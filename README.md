@@ -7,8 +7,7 @@
 <p align="center">
 
 <img loading="lazy" src="https://img.shields.io/badge/Status-%20Em%20andamento-Green"/>
-<img loading="lazy" src="https://img.shields.io/badge/license-MIT-blue
-"/>
+<img loading="lazy" src="https://img.shields.io/badge/license-MIT-blue"/>
 </p>
 
 <hr>
@@ -19,13 +18,11 @@
   
 - [Funcionalidades do projeto](#funcionalidades-do-projeto)
   
-- [Aplicação](#aplicação)
-
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
-
-- [Acesso](#acesso)
   
 - [Abrir e rodar o projeto](#abrir-e-rodar-o-projeto)
+
+- [Colaboradores](#colaboradores)
   
 - [Desenvolvedores](#desenvolvedores)
 
@@ -34,9 +31,12 @@
 
 ## 📝Breve descrição
 
-<p align="justify"> 
+<h4 align="center"> 
+    :construction:  Projeto em construção  :construction:
+</h4>
 
-Desenvolvimento do registro de materiais de uma estação de reciclagem de resíduos sólidos. O sistema realiza o cadastro de usuários para que eles tenham acesso ao sistema e possam submeter informações e características dos resíduos sólidos que chegam à empresa Ecociclo.
+Desenvolvimento do registro de materiais de uma estação de reciclagem de resíduos sólidos. O sistema realizará o cadastro de usuários para que eles tenham acesso ao sistema e possam submeter informações e características dos resíduos sólidos que chegam à empresa Ecociclo.
+
 <p align="center">
   
 <img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/7070dad1-085a-4fcd-b13c-fe2cb87bdfd3"/>
@@ -47,21 +47,13 @@ Desenvolvimento do registro de materiais de uma estação de reciclagem de resí
 
  ## :gear:Funcionalidades do projeto
 
-✔️`1° Utilidade`: Cadastro do usuário e login :
+✔️`1° Utilidade`: Login :
 
-* `1° Utilidade` : Realiza o cadastro do usuário, e assim que isso é feito, direciona para a efetuação do login.
+* `1° Utilidade` : Direciona para a efetuação do login, para ter acesso ao sistema e cadastrar os materiais recicláveis.
 
 ✔️`2° Utilidade`: Cadrasto dos materiais e registro dos dados: 
 
 * `2° Utilidade`: O método inicia coletando informações inseridas pelo usuário, as quais são necessárias para especificar as características do resíduo, e armazena os dados fornecidos para o controle dos materiais destinados à triagem.
-
-<hr>
-
-## ✅Aplicação
-
-<div align="center">
-
-</div>
 
 <hr>
 
@@ -79,7 +71,7 @@ Desenvolvimento do registro de materiais de uma estação de reciclagem de resí
 ## 👩‍💻Acesso
 
 
-Você pode [acessar o código fonte do projeto](https://github.com/davidreiseng/estacao_reciclagem) ou [baixá-lo](.zip).
+Você pode [acessar o código fonte do projeto](https://github.com/davidreiseng/estacao_reciclagem) ou [baixá-lo](https://github.com/davidreiseng/estacao_reciclagem.zip).
 
 <hr>
 
@@ -102,12 +94,12 @@ Agora está pronto para ser executado! 🤙
 <hr>  
 
 ## Colaboradores
-[<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/d6b1e650-307d-4b5b-a4a9-112f021edef4" width=115><br><sub>Anderson Soares</sub>](https://github.com/andersonmarques) |
+| [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/d6b1e650-307d-4b5b-a4a9-112f021edef4" width=115><br><sub>[Anderson Soares</sub>](https://github.com/andersonmarques) |
 | :---: |
 
 ## Desenvolvedores
 
-| [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/0209af33-1f36-4ce2-a713-f530dea3a012" width=115><br><sub>Caio Henrique da Silva Costa</sub>](https://github.com/GoldNob7) |  [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/7af2c808-2ed2-45e9-90bd-d1f709da61bd" width=115><br><sub>David Silva Reis</sub>](https://github.com/davidreiseng) |  [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/e25421ab-130e-436c-9e7d-81bc57ad314d" width=115><br><sub>[Jhully Ferreira Barroso</sub>](https://github.com/jhulllly) | [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/2d02eabc-485c-4b1d-9865-ed3591c56562" width=115><br><sub>[Naylana Santos Macedo</sub>](https://github.com/Naylana) |
+| [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/0209af33-1f36-4ce2-a713-f530dea3a012" width=115><br><sub>[Caio Henrique da Silva Costa</sub>](https://github.com/GoldNob7) |  [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/7af2c808-2ed2-45e9-90bd-d1f709da61bd" width=115><br><sub>[David Silva Reis</sub>](https://github.com/davidreiseng) |  [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/e25421ab-130e-436c-9e7d-81bc57ad314d" width=115><br><sub>[Jhully Ferreira Barroso</sub>](https://github.com/jhulllly) | [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/2d02eabc-485c-4b1d-9865-ed3591c56562" width=115><br><sub>[Naylana Santos Macedo</sub>](https://github.com/Naylana) |
 | :---: | :---: | :---: | :---: |
 
 ## Licença
