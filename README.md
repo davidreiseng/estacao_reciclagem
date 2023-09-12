@@ -7,7 +7,8 @@
 <p align="center">
 
 <img loading="lazy" src="https://img.shields.io/badge/Status-%20Em%20andamento-Green"/>
-
+<img loading="lazy" src="https://img.shields.io/badge/license-MIT-blue
+"/>
 </p>
 
 <hr>
@@ -36,6 +37,10 @@
 <p align="justify"> 
 
 Desenvolvimento do registro de materiais de uma estação de reciclagem de resíduos sólidos. O sistema realiza o cadastro de usuários para que eles tenham acesso ao sistema e possam submeter informações e características dos resíduos sólidos que chegam à empresa Ecociclo.
+<p align="center">
+  
+<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/7070dad1-085a-4fcd-b13c-fe2cb87bdfd3"/>
+</p>
 
 <hr>
 
@@ -96,7 +101,34 @@ Agora está pronto para ser executado! 🤙
 
 <hr>  
 
+## Colaboradores
+[<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/d6b1e650-307d-4b5b-a4a9-112f021edef4" width=115><br><sub>Anderson Soares</sub>](https://github.com/andersonmarques) |
+| :---: |
+
 ## Desenvolvedores
 
-| [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/0209af33-1f36-4ce2-a713-f530dea3a012" width=115><br><sub>Caio Henrique da Silva Costa</sub>](https://github.com/GoldNob7) |  [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/7af2c808-2ed2-45e9-90bd-d1f709da61bd" width=115><br><sub>David Silva Reis</sub>](https://github.com/davidreiseng) |  [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/e25421ab-130e-436c-9e7d-81bc57ad314d" width=115><br><sub>Jhully Ferreira Barroso</sub>](https://github.com/jhulllly) | [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/2d02eabc-485c-4b1d-9865-ed3591c56562" width=115><br><sub>Naylana Santos Macedo</sub>](https://github.com/Naylana) |
+| [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/0209af33-1f36-4ce2-a713-f530dea3a012" width=115><br><sub>Caio Henrique da Silva Costa</sub>](https://github.com/GoldNob7) |  [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/7af2c808-2ed2-45e9-90bd-d1f709da61bd" width=115><br><sub>David Silva Reis</sub>](https://github.com/davidreiseng) |  [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/e25421ab-130e-436c-9e7d-81bc57ad314d" width=115><br><sub>[Jhully Ferreira Barroso</sub>](https://github.com/jhulllly) | [<img loading="lazy" src="https://github.com/davidreiseng/estacao_reciclagem/assets/142530413/2d02eabc-485c-4b1d-9865-ed3591c56562" width=115><br><sub>[Naylana Santos Macedo</sub>](https://github.com/Naylana) |
 | :---: | :---: | :---: | :---: |
+
+## Licença
+MIT License
+
+Copyright (c) 2023 davidreiseng
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
